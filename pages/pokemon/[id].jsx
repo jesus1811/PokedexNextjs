@@ -23,7 +23,7 @@ const PokemonPage = ({
 };
 
 export const getStaticPaths = async (ctx) => {
-  const pokemones = [...Array(151)];
+  const pokemones = [...Array(200)];
   return {
     paths: pokemones.map((pokemon, index) => ({
       params: { id: JSON.stringify(index + 1) },
