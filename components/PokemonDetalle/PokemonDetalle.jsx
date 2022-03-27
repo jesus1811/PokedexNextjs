@@ -48,8 +48,8 @@ export const PokemonDetalle = ({
         <div className="w-full flex  flex-col justify-center items-end gap-2 px-4">
           <h2 className="text-xl text-white font-bold">Types:</h2>
           <div className="flex gap-3 justify-center items-center">
-            {types.map((type) => {
-              return <p className="text-white text-base">{type.type.name}</p>;
+            {types.map((type,index) => {
+              return <p key={index+1} className="text-white text-base">{type.type.name}</p>;
             })}
           </div>
         </div>
