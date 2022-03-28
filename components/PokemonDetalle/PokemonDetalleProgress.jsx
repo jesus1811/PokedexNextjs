@@ -9,11 +9,7 @@ export const PokemonDetalleProgress = ({ stat }) => {
           <progress min="0" max="160" value={stat.base_stat} className="h-5" />
         </div>
 
-        <span className="text-green-500">
-          {stat.base_stat <= 99
-            ? "0" + stat.base_stat + "/160"
-            : stat.base_stat + "/160"}
-        </span>
+        <span className="text-green-500">{stat.base_stat + "/160"}</span>
       </div>
     </div>
   );

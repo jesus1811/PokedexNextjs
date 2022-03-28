@@ -13,25 +13,13 @@ export const PokemonDetalle = ({
      items-center bg-gray-900 px-[5%] pt-[65px] gap-20 flex-wrap"
     >
       <div
-        className="w-[420px] min-h-[488px] flex flex-col justify-around items-center
-       bg-gray-700 p-6  rounded-md "
+        className="w-[420px] min-h-[488px]  flex flex-col justify-around items-center
+       bg-gray-700 p-4  rounded-md"
       >
-        <img src={pokemonUrlImage} alt="pokemon" className="w-[60%] h-[60%]" />
-        <div className="flex justify-around items-center w-full">
-          <img
-            src={pokemonUrlImagedetalle.front_default}
-            alt=""
-            className="w-[30%] "
-          />
-          <img
-            src={pokemonUrlImagedetalle.back_default}
-            alt=""
-            className="w-[30%] "
-          />
-        </div>
+        <img src={pokemonUrlImage} alt="pokemon" className="w-full" />
       </div>
       <div
-        className="w-[420px]  flex flex-col justify-center items-center 
+        className="w-[420px] min-h-[488px] flex flex-col justify-center items-center 
       bg-gray-700 p-4 rounded-md"
       >
         <h1
@@ -48,8 +36,12 @@ export const PokemonDetalle = ({
         <div className="w-full flex  flex-col justify-center items-end gap-2 px-4">
           <h2 className="text-xl text-white font-bold">Types:</h2>
           <div className="flex gap-3 justify-center items-center">
-            {types.map((type,index) => {
-              return <p key={index+1} className="text-white text-base">{type.type.name}</p>;
+            {types.map((type, index) => {
+              return (
+                <p key={index + 1} className="text-white text-base">
+                  {type.type.name}
+                </p>
+              );
             })}
           </div>
         </div>
