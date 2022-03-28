@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getPokemon = () => {
-  const data = axios.get("https://pokeapi.co/api/v2/pokemon?limit=400");
+  const data = axios.get("https://pokeapi.co/api/v2/pokemon?limit=200");
   return data;
 };
 export const getPokemonId = (id) => {
