@@ -1,4 +1,4 @@
-import { getPokemonId } from "../../api";
+import { getPokemon, getPokemonId } from "../../api";
 import { Main } from "../../components/layouts";
 import { PokemonDetalle } from "../../components/PokemonDetalle";
 
@@ -10,7 +10,7 @@ const PokemonPage = ({
   pokemonUrlImagedetalle,
 }) => {
   return (
-    <Main>
+    <Main title={"JesuDev - " + name}>
       <PokemonDetalle
         pokemonUrlImage={pokemonUrlImage}
         types={types}
@@ -23,10 +23,11 @@ const PokemonPage = ({
 };
 
 export const getStaticPaths = async (ctx) => {
-  const pokemones = [...Array(200)];
+  const { data } = await getPokemon();
+  const pokemones = [...data.results];
   return {
     paths: pokemones.map((pokemon, index) => ({
-      params: { id: JSON.stringify(index + 1) },
+      params: { name: pokemon.name },
     })),
 
     fallback: false,
@@ -34,7 +35,7 @@ export const getStaticPaths = async (ctx) => {
 };
 
 export const getStaticProps = async (ctx) => {
-  const { data } = await getPokemonId(ctx.params.id);
+  const { data } = await getPokemonId(ctx.params.name);
   const pokemonUrlImage = data.sprites.other.dream_world.front_default;
   const pokemonUrlImagedetalle = data.sprites;
   const types = data.types;

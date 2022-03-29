@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import Footer from "./Footer";
+import Header from "./Header";
 
-export const Main = ({ children, title, description }) => {
+const Main = ({ children, title, description }) => {
   return (
     <>
       <Head>
@@ -16,3 +16,4 @@ export const Main = ({ children, title, description }) => {
     </>
   );
 };
+export default Main;

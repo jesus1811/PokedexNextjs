@@ -1,6 +1,4 @@
-import React from "react";
-
-export const Footer = () => {
+const Footer = () => {
   return (
     <section className="w-full flex flex-col justify-center items-center bg-gray-800 py-4 px-5">
       <p className="text-white text-xl text-center">
@@ -13,3 +11,4 @@ export const Footer = () => {
     </section>
   );
 };
+export default Footer;

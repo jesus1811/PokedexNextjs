@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-export const Header = () => {
+const Header = () => {
   const router = useRouter();
   return (
     <div
@@ -22,3 +22,4 @@ flex flex-col justify-center items-center bg-gray-900 opacity-[85%]"
     </div>
   );
 };
+export default Header;

@@ -1,12 +1,6 @@
-import { PokemonDetalleProgress } from "./PokemonDetalleProgress";
+import PokemonDetalleProgress from "./PokemonDetalleProgress";
 
-export const PokemonDetalle = ({
-  pokemonUrlImage,
-  types,
-  name,
-  stats,
-  pokemonUrlImagedetalle,
-}) => {
+const PokemonDetalle = ({ pokemonUrlImage, types, name, stats }) => {
   return (
     <div
       className="w-full min-h-[calc(100vh-64px)] flex  justify-center
@@ -49,3 +43,5 @@ export const PokemonDetalle = ({
     </div>
   );
 };
+
+export default PokemonDetalle;

@@ -1,6 +1,4 @@
-import React from "react";
-
-export const PokemonDetalleProgress = ({ stat }) => {
+const PokemonDetalleProgress = ({ stat }) => {
   return (
     <div className="w-full flex justify-between items-center flex-wrap">
       <div className="flex justify-center items-center gap-2 w-full">
@@ -14,3 +12,4 @@ export const PokemonDetalleProgress = ({ stat }) => {
     </div>
   );
 };
+export default PokemonDetalleProgress;

@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
-export const PokemonList = ({ pokemon, index }) => {
+const PokemonList = ({ pokemon, index }) => {
   const router = useRouter();
   return (
     <article
       className="flex flex-col p-4 justify-center items-center [flex:150px]
      h-[150px] bg-gray-700 rounded cursor-pointer"
       onClick={() => {
-        router.push("./pokemon/" + (index + 1));
+        router.push("./pokemon/" + pokemon.name);
       }}
     >
       <h1 className="text-white text-base">
@@ -24,3 +24,4 @@ export const PokemonList = ({ pokemon, index }) => {
     </article>
   );
 };
+export default PokemonList;

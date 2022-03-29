@@ -1,6 +1,6 @@
-import { PokemonList } from "./PokemonList";
+import PokemonList from "./PokemonList";
 
-export const Pokemon = ({ pokemones }) => {
+const Pokemon = ({ pokemones }) => {
   return (
     <div
       className="w-full min-h-screen flex flex-col 
@@ -17,3 +17,4 @@ export const Pokemon = ({ pokemones }) => {
     </div>
   );
 };
+export default Pokemon;

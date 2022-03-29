@@ -1,1 +1,1 @@
-export * from "./Pokemon";
+export { default as Pokemon } from "./Pokemon";
